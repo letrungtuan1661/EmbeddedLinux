@@ -9,4 +9,4 @@ all: $(EXES)
 	gcc $^ -o $@ 
 
 clean:
-	rm -f program $(EXES)
+	rm -f $(EXES)
