@@ -15,8 +15,8 @@ int main() {
         printf("Child (Zombie): PID = %d\n", getpid());
         exit(0); // Child exits immediately
     } else {
-        printf("Parent sleeping, not calling wait()... Child becomes zombie\n");
-        sleep(30);  // Give time to observe zombie
+        printf("Parent sleeping ... Child becomes zombie\n");
+        sleep(5);  // Give time to observe zombie
         wait(&status);
     }
 

@@ -12,7 +12,8 @@ int main() {
     } else if (pid == 0) {
         sleep(5);  // Wait for parent to exit
         printf("Orphan child: PID = %d, Parent PID = %d\n", getpid(), getppid());
-        while(1);  // Keep child alive for observation
+        exit(EXIT_SUCCESS);
+        //while(1);  // Keep child alive for observation
     } else {
         printf("Parent exiting. Child will become orphan.\n");
         exit(0);  // Parent exits immediately
